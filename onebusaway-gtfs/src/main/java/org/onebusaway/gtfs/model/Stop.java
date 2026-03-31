@@ -89,6 +89,12 @@ public final class Stop extends IdentityBean<AgencyAndId> implements StopLocatio
   @CsvField(optional = true, name = "tts_stop_name")
   private String ttsStopName;
 
+  @CsvField(optional = true, name = "lit_at_night")
+  private boolean litAtNight;
+
+  @CsvField(optional = true)
+  private boolean shelter;
+
   public Stop() {}
 
   public Stop(Stop obj) {
@@ -109,6 +115,8 @@ public final class Stop extends IdentityBean<AgencyAndId> implements StopLocatio
     this.platformCode = obj.platformCode;
     this.level = obj.level;
     this.ttsStopName = obj.ttsStopName;
+    this.litAtNight = obj.litAtNight;
+    this.shelter = obj.shelter;
   }
 
   public AgencyAndId getId() {
@@ -274,5 +282,21 @@ public final class Stop extends IdentityBean<AgencyAndId> implements StopLocatio
 
   public void setTtsStopName(String ttsStopName) {
     this.ttsStopName = ttsStopName;
+  }
+
+  public boolean isLitAtNight() {
+      return litAtNight;
+  }
+
+  public void setLitAtNight(boolean litAtNight) {
+    this.litAtNight = litAtNight;
+  }
+
+  public boolean isShelter() {
+    return shelter;
+  }
+
+  public void setShelter(boolean shelter) {
+    this.shelter = shelter;
   }
 }
