@@ -285,7 +285,7 @@ public final class Stop extends IdentityBean<AgencyAndId> implements StopLocatio
   }
 
   public boolean isLitAtNight() {
-      return litAtNight;
+    return litAtNight;
   }
 
   public void setLitAtNight(boolean litAtNight) {
