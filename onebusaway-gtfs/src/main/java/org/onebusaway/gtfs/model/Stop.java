@@ -89,11 +89,11 @@ public final class Stop extends IdentityBean<AgencyAndId> implements StopLocatio
   @CsvField(optional = true, name = "tts_stop_name")
   private String ttsStopName;
 
-  @CsvField(optional = true, name = "lit_at_night")
-  private boolean litAtNight;
+  @CsvField(optional = true, name = "lit_at_night", defaultValue = "0")
+  private int litAtNight;
 
-  @CsvField(optional = true)
-  private boolean shelter;
+  @CsvField(optional = true, defaultValue = "0")
+  private int shelter;
 
   public Stop() {}
 
@@ -284,19 +284,19 @@ public final class Stop extends IdentityBean<AgencyAndId> implements StopLocatio
     this.ttsStopName = ttsStopName;
   }
 
-  public boolean isLitAtNight() {
+  public int getLitAtNight() {
     return litAtNight;
   }
 
-  public void setLitAtNight(boolean litAtNight) {
+  public void setLitAtNight(int litAtNight) {
     this.litAtNight = litAtNight;
   }
 
-  public boolean isShelter() {
+  public int isShelter() {
     return shelter;
   }
 
-  public void setShelter(boolean shelter) {
+  public void setShelter(int shelter) {
     this.shelter = shelter;
   }
 }
