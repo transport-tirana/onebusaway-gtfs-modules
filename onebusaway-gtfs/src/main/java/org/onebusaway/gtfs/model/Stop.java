@@ -292,7 +292,7 @@ public final class Stop extends IdentityBean<AgencyAndId> implements StopLocatio
     this.litAtNight = litAtNight;
   }
 
-  public int isShelter() {
+  public int getShelter() {
     return shelter;
   }
 
